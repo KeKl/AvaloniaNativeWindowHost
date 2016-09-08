@@ -1,0 +1,9 @@
+<Window x:Class="VulkanSample.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:VulkanSample;assembly=VulkanSample"
+        Title="Avalonia App" Width="1024" Height="800">
+
+    <local:VulkanControl IgnoreNativeWindowRect="False" />
+    
+</Window>

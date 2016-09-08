@@ -1,0 +1,15 @@
+﻿<Window x:Class="WPFComparison.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:WPFComparison"
+        Title="WPFComparison" Width="1024" Height="800">
+	
+<!--	<local:NativeControl />-->
+
+	<StackPanel Orientation="Horizontal">
+		<TextBox Text="Some text." />
+		<local:NativeControl MinWidth="300" MinHeight="300" />
+		<TextBox Text="Some more text." />
+	</StackPanel>
+
+</Window>

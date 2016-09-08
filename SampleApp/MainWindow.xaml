@@ -1,0 +1,65 @@
+<Window x:Class="SampleApp.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SampleApp;assembly=SampleApp"
+        Title="Avalonia App" Width="1024" Height="800">
+    
+<!--    <local:NativeControl IgnoreNativeWindowRect="False" />-->
+<!--	<local:NativeControl IgnoreNativeWindowRect="True" />-->
+    
+    <StackPanel Orientation="Horizontal">
+		<TextBox Text="Some text." Width="257" />
+		<local:NativeControl IgnoreNativeWindowRect="False" MinWidth="300" MinHeight="300" />
+		<TextBox Text="Some more text." />
+	</StackPanel>
+
+    <!--<StackPanel Orientation="Horizontal">
+        <local:NativeControl IgnoreNativeWindowRect="True" />
+    </StackPanel>-->
+    
+    <!--<StackPanel>
+		<local:NativeControl Width="1000" Height="1000" IgnoreNativeWindowRect="False" />
+	</StackPanel>-->
+    
+    <!--<StackPanel>
+		<local:NativeControl Width="1000" Height="1000" IgnoreNativeWindowRect="True" />
+	</StackPanel>-->
+    
+    <!--<DockPanel LastChildFill="true">
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="Data">
+				<MenuItem Header="New" />
+				<MenuItem Header="Exit" />
+			</MenuItem>
+			<MenuItem Header="Help">
+				<MenuItem Header="About" />
+			</MenuItem>			
+		</Menu>
+		
+		<TextBlock DockPanel.Dock="Bottom" Text="Status" />
+		
+		<TreeView DockPanel.Dock="Left" Width="200">
+			<TreeViewItem Header="Item 1">
+				<TreeViewItem Header="SubItem 1.1" />
+				<TreeViewItem Header="SubItem 1.2" />
+			</TreeViewItem>
+			<TreeViewItem Header="Item 2">
+				<TreeViewItem Header="SubItem 2.1" />
+				<TreeViewItem Header="SubItem 2.2" />
+			</TreeViewItem>
+		</TreeView>
+		
+		<StackPanel Orientation="Horizontal">
+			
+	       	<local:NativeControl />
+	    	
+	    	<StackPanel Orientation="Vertical">	
+	    		<local:NativeControl  />
+				<local:NativeControl  />
+	    	</StackPanel>
+		
+	    </StackPanel>
+		
+	</DockPanel>-->
+    
+</Window>

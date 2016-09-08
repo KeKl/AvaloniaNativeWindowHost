@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{306BFEAB-EB74-497C-9FC1-E42EC3D1340E}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Win32</RootNamespace>
+    <AssemblyName>Platform.Win32</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interop\ClassStyle.cs" />
+    <Compile Include="Interop\Delegates.cs" />
+    <Compile Include="Interop\ExtendedWindowClass.cs" />
+    <Compile Include="Interop\ExtendedWindowStyle.cs" />
+    <Compile Include="Interop\Functions.cs" />
+    <Compile Include="Interop\Message.cs" />
+    <Compile Include="Interop\OpenGL.cs" />
+    <Compile Include="Interop\PixelFormatDescriptor.cs" />
+    <Compile Include="Interop\Point.cs" />
+    <Compile Include="Interop\SetWindowPosFlags.cs" />
+    <Compile Include="Interop\ShowWindowCommand.cs" />
+    <Compile Include="Interop\TrackMouseEvent.cs" />
+    <Compile Include="Interop\VirtualKey.cs" />
+    <Compile Include="Interop\VirtualKeyToKeyTranslator.cs" />
+    <Compile Include="Interop\Win32Rectangle.cs" />
+    <Compile Include="Interop\WindowMessage.cs" />
+    <Compile Include="Interop\WindowStyle.cs" />
+    <Compile Include="Interop\XForm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win32OGLWindow.cs" />
+    <Compile Include="Win32AvaloniaWindow.cs" />
+    <Compile Include="Win32Window.cs" />
+    <Compile Include="Win32WPFWindow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Platform\Platform.csproj">
+      <Project>{14945481-33C3-44EB-80FF-50488BD05249}</Project>
+      <Name>Platform</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interop" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

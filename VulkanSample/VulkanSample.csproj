@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{3AC8CACC-1286-4169-BA57-48E99A2A97C8}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VulkanSample</RootNamespace>
+    <AssemblyName>VulkanSample</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Avalonia.Animation">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Animation.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Base">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Cairo">
+      <HintPath>..\packages\Avalonia.Desktop.0.4.0\lib\net45\Avalonia.Cairo.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Controls">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.DesignerSupport">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.DesignerSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Diagnostics">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Direct2D1">
+      <HintPath>..\packages\Avalonia.Desktop.0.4.0\lib\net45\Avalonia.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Gtk">
+      <HintPath>..\packages\Avalonia.Desktop.0.4.0\lib\net45\Avalonia.Gtk.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.HtmlRenderer">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.HtmlRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Input">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Interactivity">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Layout">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Logging.Serilog">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Logging.Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Markup.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Markup.Xaml">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Markup.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.ReactiveUI">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.ReactiveUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.SceneGraph">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.SceneGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Styling">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Styling.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Themes.Default">
+      <HintPath>..\packages\Avalonia.0.4.0\lib\portable-windows8+net45\Avalonia.Themes.Default.dll</HintPath>
+    </Reference>
+    <Reference Include="Avalonia.Win32">
+      <HintPath>..\packages\Avalonia.Desktop.0.4.0\lib\net45\Avalonia.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\packages\Serilog.1.5.14\lib\net40\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.FullNetFx">
+      <HintPath>..\packages\Serilog.1.5.14\lib\net40\Serilog.FullNetFx.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>..\packages\SharpDX.3.0.2\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1">
+      <HintPath>..\packages\SharpDX.Direct2D1.3.0.2\lib\net45\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI">
+      <HintPath>..\packages\SharpDX.DXGI.3.0.2\lib\net45\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\packages\Splat.1.6.2\lib\Net45\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Sprache">
+      <HintPath>..\packages\Sprache.2.0.0.50\lib\portable-net4+netcore45+win8+wp8+sl5+MonoAndroid+Xamarin.iOS10+MonoTouch\Sprache.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.IO" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\System.Reactive.Core.3.0.0\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\System.Reactive.Interfaces.3.0.0\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\System.Reactive.Linq.3.0.0\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\System.Reactive.PlatformServices.3.0.0\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading">
+      <HintPath>..\packages\System.Reactive.Windows.Threading.3.0.0\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Vulkan, Version=0.0.6095.26114, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VulkanSharp.0.1.4\lib\net452\Vulkan.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vulkan.Windows, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\VulkanSharp.0.1.4\lib\net452\Vulkan.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VulkanControl.cs" />
+    <Compile Include="VulkanSurface.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Avalonia.Controls\Avalonia.Controls2.csproj">
+      <Project>{1624bf7a-377a-4a9e-adcf-0637d5857185}</Project>
+      <Name>Avalonia.Controls2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform.Win32\Platform.Win32.csproj">
+      <Project>{306bfeab-eb74-497c-9fc1-e42ec3d1340e}</Project>
+      <Name>Platform.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Platform\Platform.csproj">
+      <Project>{14945481-33c3-44eb-80ff-50488bd05249}</Project>
+      <Name>Platform</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
